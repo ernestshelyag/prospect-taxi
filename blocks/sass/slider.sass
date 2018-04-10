@@ -1,0 +1,172 @@
+.slick-arrow
+  padding: 0
+  border: none
+  z-index: 300
+  outline: none
+  cursor: pointer
+  background: transparent
+  +tr
+  &:hover
+    transform: scale(1.1)
+
+.top-slider-arrow-prev, .top-slider-arrow-next
+  width: 64px
+  height: 84px
+  display: block
+  position: relative
+  +rm
+    width: 40px
+    height: 60px
+
+.arrow-prev-big-img
+  position: absolute
+  top: 0
+  bottom: 0
+  left: -10px
+  margin: auto
+  +rm
+    display: none
+
+.arrow-prev-small-img
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 30px
+  margin: auto
+  +rm
+    left: 0
+
+.arrow-next-big-img
+  position: absolute
+  top: 0
+  bottom: 0
+  right: -10px
+  margin: auto
+  +rm
+    display: none
+
+.arrow-next-small-img
+  position: absolute
+  top: 0
+  bottom: 0
+  right: 30px
+  margin: auto
+  +rm
+    right: 0
+
+.slider-banner
+  font-family: 'GothamProRegular'
+  width: 600px
+  margin: 30px 0 0
+  +r(1100)
+    margin: 0 auto
+    width: 450px
+  +r(500)
+    width: auto
+  &__slide
+    height: 380px
+    outline: none
+    +rm
+      height: 360px
+      display: flex!important
+      flex-direction: column
+      justify-content: center
+      align-items: baseline
+    +r(500)
+      height: 320px
+  &__item
+    position: relative
+    padding: 35px 0
+    +r(500)
+      padding: 25px 0
+    &_1
+      animation-delay: 1s
+    &_2
+      animation-delay: 1.2s
+    &_3
+      animation-delay: 1.4s
+
+
+  &__img
+    position: absolute
+    width: 57px
+    height: 57px
+    top: 0
+    bottom: 0
+    left: 0
+    margin: auto
+  &__text
+    padding-left: 85px
+    color: $main-color
+    font-size: 24px
+    display: block
+    +r(1200)
+      font-size: 18px
+
+.slider-car
+  position: absolute
+  left: 0
+  right: 0
+  bottom: 0
+  margin: auto
+  z-index: 100
+  width: 1002px
+  +r(1040)
+    width: auto
+  +rm
+    display: none
+  &__slide
+    position: relative
+    height: 380px
+    outline: none
+  &__no-light
+    position: absolute
+    width: 612px
+    left: 0
+    right: 0
+    margin: auto
+
+  &__light
+    position: absolute
+    right: 0
+    margin: auto
+    opacity: 0
+    width: 1254px
+    left: -76px
+    top: -266px
+    animation: light 1.5s forwards
+    animation-delay: 2.5s
+    +r(1040)
+      display: none!important
+  &__half, &__side
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    margin: auto
+    +r(1040)
+      left: -145px
+    +r(820)
+      left: -245px
+
+@keyframes light
+  from
+    opacity: 0
+  1%
+    opacity: 1
+  50%
+    opacity: 0
+  51%
+    opacity: 1
+  to
+    opacity: 0
+
+
+
+
+
+
+
+
+
+

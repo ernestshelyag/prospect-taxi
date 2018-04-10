@@ -1,0 +1,239 @@
+.reqs
+  background-image: url("../img/block-3.jpg")
+  background-position: 0 0
+  background-size: cover
+  background-repeat: no-repeat
+  position: relative
+  padding-bottom: 68px
+  +r(450)
+    padding-bottom: 30px
+  &__bg
+    position: absolute
+    left: 0
+    top: -933px
+    z-index: -1
+    +r(1730)
+      display: none
+  &__wrp
+    max-width: 1412px
+    margin: 0 auto
+    padding: 0 50px
+    +r(1024)
+      max-width: 958px
+      padding: 0 15px
+  &__info-block
+    position: relative
+    border-right: solid 4px $main-color
+    border-left: solid 4px $main-color
+    border-bottom: solid 4px $main-color
+    text-align: center
+  &__title-block
+    text-align: center
+    +psevdo
+    &:before, &:after
+      height: 4px
+      width: 30%
+      top: 0
+      background: $main-color
+      +r(830)
+        width: 50%
+    &:before
+      left: 0
+    &:after
+      right: 0
+  &__title
+    font-size: 47px
+    position: absolute
+    left: 0
+    right: 0
+    margin: auto
+    top: -25px
+    +r(830)
+      font-size: 35px
+      top: 30px
+    +r(450)
+      font-size: 25px
+      top: 40px
+  &__img
+    position: absolute
+    left: 0
+    right: 0
+    margin: auto
+    top: 55px
+    +r(900)
+      display: none
+  &__list
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 131px 0
+    +r(900)
+      flex-wrap: wrap
+      align-items: baseline
+      padding: 60px 0 0
+    +r(830)
+      padding: 100px 0 0
+      width: 382px
+      margin: auto
+    +r(450)
+      flex-direction: column
+      align-items: center
+      width: auto
+  &__item
+    position: relative
+    padding: 0 15px
+    color: #000
+    margin: 0 15px
+    width: 258px
+    +r(1300)
+      width: 160px
+    +r(900)
+      border: solid 1px $main-color
+      height: 150px
+      min-width: 150px
+      color: #fff
+      margin-bottom: 30px
+      &:before, &:after
+        display: none
+    &:before, &:after
+      position: absolute
+      content: ''
+      width: 100%
+      margin: auto
+      z-index: -1
+      transform: skew(-20deg)
+    &:before
+      height: 112px
+      top: 25px
+      bottom: 0
+      left: 0
+      right: 0
+      background: rgba(#fff, .8)
+    &:after
+      height: 20px
+      +tr
+      top: 117px
+      bottom: 0
+      left: -33px
+      right: 0
+      background-image: url("../img/orange-bg.jpg")
+    &.active
+      &:after
+        height: 112px
+        top: 177px
+        bottom: 0
+        left: -64px
+        right: 0
+        box-shadow: (6px 3px 20px rgba(#000, .5))
+      .reqs__icon
+        opacity: 1
+  &__text
+    line-height: 1.3
+    +r(900)
+      display: block
+      padding-top: 10px
+  &__icon
+    position: absolute
+    top: 178px
+    bottom: 0
+    left: 0
+    right: 71px
+    margin: auto
+    +tr
+    opacity: 0
+    width: 57px
+    height: 57px
+    +r(900)
+      opacity: 1
+      right: 0
+      top: 60px
+
+.reqs-callback
+  &__title
+    font-size: 33px
+    line-height: 1.27
+    margin-bottom: 65px
+    display: block
+    +r(830)
+      margin-bottom: 30px
+      font-size: 20px
+    +r(450)
+      display: none
+  &__form
+    margin-bottom: 80px
+    +r(830)
+      margin-bottom: 60px
+    +r(450)
+      display: none
+  &__input-block
+    height: 52px
+    line-height: 52px
+    display: inline-block
+    padding: 0 30px
+    +romb
+    +r(700)
+      padding: 0
+      display: block
+      width: 330px
+      margin: auto
+    +r(450)
+      &:before
+        display: none
+
+    &_phone
+      margin: 0 27px 0 0
+      +r(700)
+        margin: 0 auto 10px
+      &:before
+        background: #fff
+    &_submit
+      color: #fff
+      &:before
+        background: $main-color
+      &:hover::before
+        border: solid 1px rgba(#fff, .5)
+        box-shadow: (0 0 20px $main-color)
+  &__input
+    background: transparent
+    height: 100%
+
+.hero-callback-hidden
+  display: none
+  background: url("../img/main-bg.jpg")
+  +r(450)
+    display: block
+  .hero-callback
+    position: relative
+    display: block
+    top: 0
+    right: 0
+    &__container
+      width: 100%
+      border-right: transparent
+      border-left: transparent
+
+.reqs-phone
+  padding-left: 40px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

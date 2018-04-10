@@ -1,0 +1,168 @@
+.hero
+  height: 942px
+  background-image: url("../img/block-1.jpg")
+  background-position: 0 0
+  background-size: cover
+  background-repeat: no-repeat
+  position: relative
+  padding: 120px 0 80px
+  +rm
+    height: auto
+    background-image: url("../img/main-bg.jpg")
+    padding: 100px 0 30px
+  +r(590)
+    padding: 100px 0
+  &__bg
+    z-index: 50
+    position: absolute
+    right: 0
+    bottom: -109px
+    +rm
+      display: none
+  &__link-arrow
+    width: 32px
+    z-index: 50
+    position: absolute
+    left: 0
+    bottom: -100px
+    right: 0
+    margin: auto
+    +rm
+      display: none
+  &__wrp
+    +wrp
+    position: relative
+    height: 100%
+  &__ars
+    position: absolute
+    left: 0
+    right: 0
+    margin: auto
+    bottom: 185px
+    display: flex
+    justify-content: space-between
+    +r(1300)
+      padding: 0 15px
+    +r(1100)
+      bottom: 465px
+      width: 700px
+    +rm
+      bottom: 149px
+      width: auto
+    +r(590)
+      bottom: -80px
+      width: 250px
+
+.hero-callback
+
+  input::-webkit-input-placeholder
+    color: #fff
+  input::-moz-placeholder
+    color: #fff
+  input:-moz-placeholder
+    color: #fff
+  input:-ms-input-placeholder
+    color: #fff
+
+  position: absolute
+  right: 56px
+  top: 56px
+  +r(1100)
+    display: none
+
+  &__container
+    border: solid 4px $main-color
+    width: 498px
+    height: 379px
+    position: relative
+    text-align: center
+  &__img
+    position: absolute
+    top: -97px
+    left: 80px
+  &__title
+    display: block
+    margin-top: 30px
+    font-size: 18px
+    line-height: 1.67
+  &__input-block
+    font-size: 14px
+    width: 280px
+    margin: 36px auto
+    height: 30px
+    line-height: 30px
+    border-bottom: solid 1px #fff
+    +psevdo
+    &:before
+      width: 20px
+      height: 20px
+      top: 0
+      bottom: 0
+      left: 0
+      margin: auto
+      background-size: cover
+    &_name::before
+      background-image: url("../img/svg/person.svg")
+    &_phone::before
+      background-image: url("../img/svg/phone-3.svg")
+  &__submit-block
+    display: inline-block
+    margin-top: 5px
+    +romb
+    &:before
+      background: $main-color
+      z-index: 1
+    &:hover::before
+      border: solid 1px rgba(#fff, .5)
+      box-shadow: (0 0 20px $main-color)
+  &__input
+    width: 100%
+    background: transparent
+    color: #fff
+    padding-left: 30px
+  &__submit
+    z-index: 2
+    position: relative
+    height: 52px
+    line-height: 52px
+    width: 100%
+    background: transparent
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

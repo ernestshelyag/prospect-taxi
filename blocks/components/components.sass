@@ -1,0 +1,207 @@
+.title
+  text-align: center
+  .active
+    .title__line-1, .title__line-2
+     &:before
+       animation: line-1 1s forwards
+       animation-delay: .8s
+     &:after
+       animation: line-2 .3s forwards
+       animation-delay: .5s
+  &__text
+    visibility: visible!important
+    margin: 80px 0
+    position: relative
+    display: inline-block
+    padding: 0 20px
+    font-size: 27px
+    text-transform: uppercase
+    letter-spacing: 1.5px
+    +rm
+      margin: 40px 0
+    +r(660)
+      font-size: 20px
+  &__line-1, &__line-2
+    position: absolute
+    top: 0
+    bottom: 0
+    margin: auto
+    left: 0
+    width: 100%
+    height: 58px
+    transform: skew(-20deg)
+    +psevdo
+    &:before
+      width: 0
+      height: 1px
+      background: $main-color
+    &:after
+      width: 1px
+      height: 0
+      background: $main-color
+  &__line-1::before
+    bottom: 0
+    right: 0
+  &__line-1::after
+    right: 0
+    top: 0
+  &__line-2::before
+    top: 0
+    left: 0
+  &__line-2::after
+    left: 0
+    bottom: 0
+@keyframes line-1
+  from
+    width: 0
+  to
+    width: 80%
+@keyframes line-2
+  from
+    height: 0
+  to
+    height: 100%
+
+%romb
+  position: relative
+  padding: 0 15px
+  &:before
+    position: absolute
+    content: ''
+    width: 100%
+    height: 52px
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    margin: auto
+    z-index: -1
+    transform: skew(-20deg)
+    +tr
+=romb
+  @extend %romb
+
+@mixin opacity($opacity)
+  opacity: $opacity / 100
+  filter: alpha(opacity = $opacity)
+
+.preloader
+  position: fixed
+  top: 0
+  left: 0
+  bottom: 0
+  right: 0
+  z-index: 1000
+  background: url("../img/main-bg.jpg")
+  &__pulse
+    position: relative
+    left: 50%
+    top: 50vh
+    margin: -40px 0 0 -40px
+    display: block
+    &:before, &:after
+      content: ''
+      border: solid 5px $main-color
+      width: 80px
+      height: 80px
+      border-radius: 50%
+      position: absolute
+    &:before
+      animation: pulse-out 1s ease-in infinite
+    &:after
+      animation: pulse-in 1s linear infinite
+
+@keyframes pulse-out
+  from
+    @include opacity(100)
+  50%
+    @include opacity(50)
+  to
+    @include opacity(0)
+
+@keyframes pulse-in
+  from
+    @include opacity(0)
+    transform: scale(0)
+  to
+    @include opacity(100)
+    transform: scale(1)
+
+.hidden
+  +vcenter
+  width: 498px
+  height: 379px
+  +r(540)
+    width: 100%
+  .mfp-close
+    color: #fff
+  .hero-callback
+    top: 0
+    right: 0
+    display: block!important
+    +r(540)
+      position: relative
+    &__container
+      +r(540)
+        width: 100%
+        border-right: transparent
+        border-left: transparent
+  .success
+    border: solid 4px $main-color
+    box-shadow: (0 0 20px $main-color)
+    text-align: center
+    line-height: 2
+    padding: 30px 0
+.mfp-bg
+  opacity: .9
+
+.error
+  border-bottom: solid 7px $main-color!important
+
+.svg-orange
+  fill: #f60
+
+.svg-gray
+  fill: #cacaca
+
+.ar__1, .ar__2, .ar__3, .ar__4, .ar__5, .ar__6
+  animation: pulse 1.5s ease-out infinite
+.ar__1
+  animation-delay: .5s
+.ar__2
+  animation-delay: .4s
+.ar__3
+  animation-delay: .3s
+.ar__4
+  animation-delay: .2s
+.ar__5
+  animation-delay: .1s
+
+@keyframes pulse
+  from
+    opacity: .2
+  50%
+    opacity: .6
+  to
+    opacity: .2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

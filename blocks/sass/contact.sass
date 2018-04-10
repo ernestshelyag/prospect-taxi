@@ -1,0 +1,104 @@
+.contacts
+  position: relative
+  background-image: url("../img/main-bg.jpg")
+  &__svg-block
+    position: absolute
+    right: 0
+    top: 0
+    width: 1920px
+    z-index: -1
+    fill: #707070
+
+  .ar__1, .ar__2, .ar__3, .ar__4, .ar__5, .ar__6
+    animation: pulse-bg 6s ease-out infinite
+  .ar__1
+    animation-delay: 5s
+  .ar__2
+    animation-delay: 4s
+  .ar__3
+    animation-delay: 3s
+  .ar__4
+    animation-delay: 2s
+  .ar__5
+    animation-delay: 1s
+
+  &__map-container
+    height: 680px
+    position: relative
+    margin-top: 24px
+    +r(900)
+      height: 500px
+    +r(777)
+      margin-top: 0
+      height: auto
+  &__map
+    position: absolute
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    z-index: -1
+    +r(777)
+      position: relative
+      height: 400px
+    +r(400)
+      height: 300px
+  &__wrp
+    +wrp
+  &__info-block
+    position: relative
+    float: right
+    +r(777)
+      float: none
+  &__img
+    position: absolute
+    top: -66px
+    left: -135px
+    z-index: -1
+    +r(777)
+      display: none
+  &__list
+    width: 450px
+    height: 468px
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+    padding: 17px 0 58px 76px
+    +r(777)
+      margin: auto
+      font-size: 14px
+      padding: 20px
+      height: 271px
+      width: 300px
+  &__address, &__phone
+    padding-left: 65px
+    font-size: 22px
+    +r(777)
+      font-size: 14px
+    +psevdo
+    &:after
+      width: 48px
+      height: 48px
+      top: 0
+      bottom: 0
+      left: 0
+      margin: auto
+      background-size: contain
+      background-repeat: no-repeat
+  &__address
+    display: block
+    line-height: 2
+    &:after
+      background-image: url("../img/svg/map.svg")
+  &__phone
+    &:after
+      background-image: url("../img/svg/phone-2.svg")
+
+@keyframes pulse-bg
+  from
+    opacity: 0
+  50%
+    opacity: .1
+  to
+    opacity: 0
+

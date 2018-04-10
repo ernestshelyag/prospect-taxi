@@ -1,0 +1,166 @@
+.header
+  height: 120px
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  z-index: 500
+  max-width: 1920px
+  margin: auto
+  +tr
+  +r(1130)
+    background: #333
+    height: 70px
+    border-bottom: solid 1px $main-color
+  &__menu-btn-hidden-block
+    display: none
+    width: 40px
+    height: 40px
+    cursor: pointer
+    &:before
+      display: none
+      content: ""
+      position: fixed
+      top: 285px
+      left: 0
+      right: 0
+      bottom: 0
+      z-index: 0
+    &.active::before
+      display: block
+    +r(1130)
+      display: block
+
+  &__menu-btn-hidden
+    display: block
+    width: 40px
+    height: 3px
+    margin-top: 17px
+    background: #fff
+
+    +psevdo
+    &:before, &:after
+      width: 100%
+      height: 3px
+      background: #fff
+      left: 0
+      transition: all cubic-bezier(.08,.88,.26,.93) .5s
+    &:before
+      top: 10px
+    &:after
+      bottom: 10px
+    &.active
+      background: transparent
+      &:before
+        top: 0
+        transform: rotate(45deg)
+      &:after
+        bottom: 0
+        transform: rotate(315deg)
+
+  &__wrp
+    +wrp
+    display: flex
+    justify-content: space-between
+    align-items: center
+    height: 100%
+    z-index: 400
+    position: relative
+    +r(1130)
+      background: #333
+  &__logo-block
+    margin-right: 60px
+    +r(1200)
+      margin-right: 20px
+  &__menu-block
+    flex-grow: 1
+    display: flex
+    justify-content: space-between
+    +r(1130)
+      display: none
+  &__item
+    +romb
+    &:before
+      border: solid 1px transparent
+    &:hover::before
+      animation: border .5s forwards
+    &_phone
+      padding-left: 35px
+      +psevdo
+      &:after
+        width: 21px
+        height: 21px
+        top: 0
+        bottom: 0
+        left: 10px
+        margin: auto
+        background: url("../img/svg/phone-1.svg")
+        background-size: cover
+
+  &__request
+    +romb
+    &:before
+      background: $main-color
+    &:hover::before
+      border: solid 1px rgba(#fff, .5)
+      box-shadow: (0 0 20px $main-color)
+
+@keyframes border
+  from
+    border: solid 1px transparent
+  10%
+    border: solid 1px $main-color
+    box-shadow: (0 0 10px $main-color)
+  to
+    border: solid 1px rgba(#fff, .3)
+    box-shadow: none
+
+.header-small
+  background: #333
+  height: 70px
+  border-bottom: solid 1px $main-color
+
+.header-hide
+  top: -70px
+  opacity: 0
+
+.header-menu-hidden
+  display: flex
+  flex-direction: column
+  align-items: flex-end
+  position: absolute
+  width: 100%
+  top: -300px
+  left: 0
+  background: #333
+  text-align: right
+  padding: 15px 50px 30px
+  border-bottom: solid 1px $main-color
+  +tr
+  +r(1024)
+    padding: 15px 15px 30px
+  &.active
+    top: 70px
+  &__item
+    margin-bottom: 20px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

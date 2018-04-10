@@ -1,0 +1,420 @@
+include bemto/bemto
+- set_bemto_settings({ modifier: "--" })
+
+include components/components
+
+doctype html
+html(lang="ru")
+    head
+        meta(charset="utf-8")
+
+        meta(content="" name="author")
+        meta(content="" name="description")
+
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        meta(name="HandheldFriendly" content="true")
+        meta(name="format-detection", content="telephone=no")
+        meta(content="IE=edge" http-equiv="X-UA-Compatible")
+
+        link(rel="shortcut icon", href="img/favicon/favicon.png", type="image/x-icon")
+        link(rel="apple-touch-icon", href="img/favicon/apple-touch-icon.png")
+        link(rel="apple-touch-icon", sizes="72x72", href="img/favicon/apple-touch-icon-72x72.png")
+        link(rel="apple-touch-icon", sizes="114x114", href="img/favicon/apple-touch-icon-114x114.png")
+        link(rel="apple-touch-icon", sizes="144x144", href="img/favicon/apple-touch-icon-144x144.png")
+        link(rel="apple-touch-icon", sizes="152x152", href="img/favicon/apple-touch-icon-152x152.png")
+        link(rel="apple-touch-icon", sizes="180x180", href="img/favicon/apple-touch-icon-180x180.png")
+
+        link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans")
+
+        // build:css css/vendor.css
+        link(rel="stylesheet" href="libs/normalize-css/normalize.css")
+        link(rel="stylesheet" href="libs/slick-carousel/slick/slick.css")
+        link(rel="stylesheet" href="libs/magnific-popup/dist/magnific-popup.css")
+        link(rel="stylesheet" href="libs/animate.css/animate.css")
+        // endbuild
+
+        // build:css css/main.css
+        link(rel="stylesheet", href="css/styles.css")
+        // endbuild
+
+        <!--[if (gte IE 6)&(lte IE 8)]>
+        script(src="js/html5shiv.js")
+        script(src="js/selectivizr-min.js")
+        <![endif]-->
+
+        title Taxi
+
+    body
+
+        <!--[if lt IE 8]>
+        p(style="padding: 20px;")
+            | Вы используете старую версию браузера.
+            | Пожалуйста
+            a(href='http://browsehappy.com/', style="padding: 0 5px; font-weight: bold; text-transform: uppercase; color: blue;") обновите ваш браузер
+            | перейдя по ссылке.
+        <![endif]-->
+
+        +b.SPAN.preloader
+            +e.SPAN.pulse
+
+        +b.HEADER.header.header-top
+            +b.DIV.header-menu-hidden
+                +e.A.item(href="#cars" data-target="anchor") Автомобили
+                +e.A.item(href="#reqs" data-target="anchor") Требования
+                +e.A.item(href="#contacts" data-target="anchor") Контакты
+                +e.A.item.header__item_phone(href="tel:+78122322434") +7 (812) 232-24-34
+                +e.A.request.js-popup-link(href="#") Отправить заявку
+            +e.DIV.wrp
+                +e.A.logo-block(href="/")
+                    +e.IMG.logo(src="img/logo.png")
+                +e.DIV.menu-block
+                    +e.A.item(href="#cars" data-target="anchor") Автомобили
+                    +e.A.item(href="#reqs" data-target="anchor") Требования
+                    +e.A.item(href="#contacts" data-target="anchor") Контакты
+                    +e.A.item.header__item_phone(href="tel:+78122322434") +7 (812) 232-24-34
+                    +e.A.request.js-popup-link(href="#") Отправить заявку
+                +e.DIV.menu-btn-hidden-block
+                    +e.SPAN.menu-btn-hidden
+
+        +b.MAIN.main
+            +b.DIV.hero
+                +e.IMG.bg(src="img/hero-bg.png")
+                +e.A.link-arrow.svg-orange(href="#cars" data-target="anchor")
+                    svg(version='1.1', id='Слой_1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', width='30px', height='138px', viewbox='0 0 30 138', enable-background='new 0 0 30 138', xml:space='preserve')
+                        path.ar__6(d='M15.286,8.66L30,0.326v9.315l-6.489,3.676l-8.221,4.659l-8.222-4.659l-7.061-4V0 L15.286,8.66z')
+                        path.ar__5(d='M15.286,32.46L30,24.127v9.315l-6.489,3.676l-8.221,4.658l-8.222-4.658l-7.061-4V23.8 L15.286,32.46z')
+                        path.ar__4(d='M15.286,56.515L30,48.181V57.5l-6.489,3.676l-8.221,4.659l-8.222-4.659l-7.061-4v-9.315 L15.286,56.515z')
+                        path.ar__3(d='M15.286,80.466L30,72.132v9.315l-6.489,3.676l-8.221,4.658l-8.222-4.658l-7.061-4 v-9.314L15.286,80.466z')
+                        path.ar__2(d='M15.286,104.618L30,96.284v9.316l-6.489,3.676l-8.221,4.658l-8.222-4.658l-7.061-4 v-9.315L15.286,104.618z')
+                        path.ar__1(d='M15.286,128.68L30,120.347v9.314l-6.489,3.679L15.29,138l-8.222-4.66l-7.061-4v-9.315 L15.286,128.68z')
+                +e.DIV.wrp
+                    +b.DIV.slider-banner
+                        +e.DIV.slide
+                            +e.DIV.item.animated.fadeInRight.slider-banner__item_1
+                                +e.IMG.img(src="img/svg/slider/set-1/1.svg")
+                                +e.SPAN.text Высокий доход
+                            +e.DIV.item.animated.fadeInRight.slider-banner__item_2
+                                +e.IMG.img(src="img/svg/slider/set-1/2.svg")
+                                +e.SPAN.text Статусные клиенты
+                            +e.DIV.item.animated.fadeInRight.slider-banner__item_3
+                                +e.IMG.img(src="img/svg/slider/set-1/3.svg")
+                                +e.SPAN.text Комфортная работа
+                        +e.DIV.slide
+                            +e.DIV.item
+                                +e.IMG.img(src="img/svg/slider/set-2/1.svg")
+                                +e.SPAN.text Индивидуальный подход
+                            +e.DIV.item
+                                +e.IMG.img(src="img/svg/slider/set-2/2.svg")
+                                +e.SPAN.text КАСКО и ТО за счет компании
+                            +e.DIV.item
+                                +e.IMG.img(src="img/svg/slider/set-2/3.svg")
+                                +e.SPAN.text Процент с оборота или ставка аренды
+                            +e.DIV.item
+                                +e.IMG.img(src="img/svg/slider/set-2/4.svg")
+                                +e.SPAN.text Гибкие условия
+                        +e.DIV.slide
+                            +e.DIV.item
+                                +e.IMG.img(src="img/svg/slider/set-3/1.svg")
+                                +e.SPAN.text Mercedes E-Class, W213
+                            +e.DIV.item
+                                +e.IMG.img(src="img/svg/slider/set-3/2.svg")
+                                +e.SPAN.text 2017 год выпуска
+                            +e.DIV.item
+                                +e.IMG.img(src="img/svg/slider/set-3/3.svg")
+                                +e.SPAN.text Комплектация бизнес
+                    +b.DIV.slider-car
+                        +e.DIV.slide.slider-car__slide_light
+                            +e.IMG.no-light(src="img/no-light.png")
+                            +e.IMG.light(src="img/light.png")
+
+                        +e.DIV.slide
+                            +e.IMG.half(src="img/car-2.png")
+
+                        +e.DIV.slide
+                            +e.IMG.side(src="img/car-3.png")
+
+                    +e.DIV.ars
+                    +b.DIV.hero-callback
+                        +e.DIV.container
+                            +e.IMG.img(src="img/hand.png")
+                            +e.SPAN.title
+                                | Закажите обратный звонок,
+                                br
+                                | чтобы узнать подробнее
+                            +e.FORM.form.callback-form
+                                +e.DIV.input-block.hero-callback__input-block_name
+                                    +e.INPUT.input(type='text' placeholder='Ваше имя')
+                                +e.DIV.input-block.hero-callback__input-block_phone
+                                    +e.INPUT.input.callback-input(type='text' name="phone" placeholder='Ваш номер телефона')
+                                +e.DIV.submit-block
+                                    +e.INPUT.submit(type='submit' value='Заказать звонок')
+
+            +b.SECTION.cars#cars
+                +e.IMG.paralax-img(src="img/paralax.jpg")
+                +title('Автомобили')
+                +e.DIV.wrp
+                    +e.DIV.info-block
+                        +e.IMG.title-img(src="img/mark-auto.png")
+                        +e.IMG.car-img.wow.cars__car-img_no-light(src="img/car-sm.png")
+                        +e.IMG.car-img.wow.cars__car-img_light(src="img/light-min.png")
+                        +e.IMG.bg-img(src="img/orange-bg.png")
+                        +e.car-name Mercedes E-Class, W213
+                        +e.UL.list
+                            +e.LI.item
+                                +e.SPAN.text Расход топлива (л/100 кв. км)
+                                +e.SPAN.dots
+                                +e.SPAN.info 4,7–7,6
+                            +e.LI.item
+                                +e.SPAN.text Максимальная скорость (км/ч)
+                                +e.SPAN.dots
+                                +e.SPAN.info 224
+                            +e.LI.item
+                                +e.SPAN.text Экологический стандарт
+                                +e.SPAN.dots
+                                +e.SPAN.info ЕВРО-6
+                            +e.LI.item
+                                +e.SPAN.text Привод
+                                +e.SPAN.dots
+                                +e.SPAN.info Задний привод
+                            +e.LI.item
+                                +e.SPAN.text Коробка передач
+                                +e.SPAN.dots
+                                +e.SPAN.info 9G-TRONIC
+                            +e.LI.item
+                                +e.SPAN.text Шины/диски
+                                +e.SPAN.dots
+                                +e.SPAN.info 205/65 R 16
+                            +e.LI.item
+                                +e.SPAN.text Тормозные механизмы
+                                +e.SPAN.dots
+                                +e.SPAN.info Диски, вентилируемые
+                            +e.LI.item
+                                +e.SPAN.text
+                                    | Ёмкость багажника
+                                    br
+                                    | (согласно методу измерений VDA), (л)
+                                +e.SPAN.dots
+                                +e.SPAN.info 540
+                            +e.LI.item
+                                +e.SPAN.text Диаметр разворота (м)
+                                +e.SPAN.dots
+                                +e.SPAN.info 11,6
+                            +e.LI.item
+                                +e.SPAN.text Собственная масса/
+                                +e.SPAN.info
+                            +e.LI.item
+                                +e.SPAN.text Грузоподъёмность (куб. кг)
+                                +e.SPAN.dots
+                                +e.SPAN.info 1.680/640
+                +b.DIV.cars-btn-block
+                    +e.DIV.container
+                        +e.A.btn.js-popup-link(href="#") Взять в аренду
+                        +e.SPAN.img.cars-btn-block__img_ar-left.svg-gray
+                            svg(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', width='138px', height='30px', viewbox='0 0 138 30', enable-background='new 0 0 138 30', xml:space='preserve')
+                                path.ar__1(d='M128.68,15.29L120.347,30h9.315l3.676-6.49l4.658-8.22l-4.658-8.23l-4-7.06h-9.315L128.68,15.29z')
+                                path.ar__2(d='M104.618,15.29L96.284,30h9.316l3.676-6.49l4.659-8.22l-4.659-8.23l-4-7.06h-9.315L104.618,15.29z')
+                                path.ar__3(d='M80.467,15.29L72.132,30h9.316l3.675-6.49l4.659-8.22l-4.659-8.23l-4-7.06h-9.315L80.467,15.29z')
+                                path.ar__4(d='M56.516,15.29L48.181,30H57.5l3.676-6.49l4.659-8.22l-4.659-8.23l-4-7.06h-9.314 L56.516,15.29z')
+                                path.ar__5(d='M32.461,15.29L24.127,30h9.315l3.676-6.49l4.658-8.22l-4.658-8.23l-4-7.06H23.8 L32.461,15.29z')
+                                path.ar__6(d='M8.661,15.29L0.327,30h9.315l3.676-6.49l4.658-8.22l-4.658-8.23l-4-7.06H0 L8.661,15.29z')
+                        +e.SPAN.img.cars-btn-block__img_ar-right.svg-gray
+                            svg(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', width='138px', height='30px', viewbox='0 0 138 30', enable-background='new 0 0 138 30', xml:space='preserve')
+                                path.ar__1(d='M9.32,15.29L17.65,30H8.34l-3.68-6.49L0,15.29l4.66-8.23l4-7.06h9.32L9.32,15.29z')
+                                path.ar__2(d='M33.38,15.29L41.72,30H32.4l-3.68-6.49l-4.65-8.22l4.65-8.23l4-7.06h9.32L33.38,15.29 z')
+                                path.ar__3(d='M57.53,15.29L65.87,30h-9.32l-3.67-6.49l-4.66-8.22l4.66-8.23l4-7.06h9.31 L57.53,15.29z')
+                                path.ar__4(d='M81.49,15.29L89.82,30H80.5l-3.67-6.49l-4.66-8.22l4.66-8.23l4-7.06h9.31L81.49,15.29 z')
+                                path.ar__5(d='M105.54,15.29L113.87,30h-9.31l-3.68-6.49l-4.66-8.22l4.66-8.23l4-7.06h9.32 L105.54,15.29z')
+                                path.ar__6(d='M129.34,15.29L137.67,30h-9.31l-3.68-6.49l-4.66-8.22l4.66-8.23l4-7.06H138 L129.34,15.29z')
+
+            +b.SECTION.reqs#reqs
+                +e.IMG.bg(src="img/reqs-bg.png")
+                +title('Условия')
+                +e.DIV.wrp
+                    +e.DIV.info-block
+                        +e.IMG.img(src="img/orange-arrow-3.png")
+                        +e.DIV.title-block
+                           +e.SPAN.title Это про Вас?
+                        +e.DIV.list
+                            +e.DIV.item#it-1
+                                +e.IMG.icon(src="img/svg/pase.svg")
+                                +e.SPAN.text
+                                    | Гражданин
+                                    br
+                                    |​ РФ
+                                +e.SPAN.move-block
+                            +e.DIV.item#it-2
+                                +e.IMG.icon(src="img/svg/25-years.svg")
+                                +e.SPAN.text
+                                    |Возраст
+                                    br
+                                    |от 25 лет
+                                +e.SPAN.move-block
+                            +e.DIV.item#it-3
+                                +e.IMG.icon(src="img/svg/no-jail.svg")
+                                +e.SPAN.text
+                                    |Отсутствие
+                                    br
+                                    |судимости
+                                +e.SPAN.move-block
+                            +e.DIV.item#it-4
+                                +e.IMG.icon(src="img/svg/license.svg")
+                                +e.SPAN.text
+                                    | Не лишены
+                                    br
+                                    | водительского
+                                    br
+                                    | удостоверения
+                                +e.SPAN.move-block
+                        +b.DIV.reqs-callback
+                            +e.SPAN.title
+                                | Оставьте свой номер телефона и
+                                br
+                                | мы Вам перезвоним
+                            +e.FORM.form.callback-form
+                                +e.DIV.input-block.reqs-callback__input-block_phone
+                                    +e.INPUT.input.callback-input.reqs-phone(type='text' name="phone" placeholder='+7(___)___-__-__')
+                                +e.DIV.input-block.reqs-callback__input-block_submit
+                                    +e.INPUT.input(type='submit' value='Арендовать машину бизнес класса')
+            .hero-callback-hidden
+                +b.DIV.hero-callback
+                    +e.DIV.container
+                        +e.SPAN.title
+                            | Оставьте свой номер телефона
+                            br
+                            | и мы Вам перезвоним
+                        +e.FORM.form.callback-form
+                            +e.DIV.input-block.hero-callback__input-block_name
+                                +e.INPUT.input(type='text' placeholder='Ваше имя')
+                            +e.DIV.input-block.hero-callback__input-block_phone
+                                +e.INPUT.input.callback-input(type='text' name="phone" placeholder='Ваш номер телефона')
+                            +e.DIV.submit-block
+                                +e.INPUT.submit(type='submit' value='Заказать звонок')
+
+            +b.SECTION.contacts#contacts
+                +e.SPAN.svg-block
+                    svg(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewbox='0 0 138 30', enable-background='new 0 0 138 30', xml:space='preserve')
+                        path.ar__1(d='M128.68,15.29L120.347,30h9.315l3.676-6.49l4.658-8.22l-4.658-8.23l-4-7.06h-9.315L128.68,15.29z')
+                        path.ar__2(d='M104.618,15.29L96.284,30h9.316l3.676-6.49l4.659-8.22l-4.659-8.23l-4-7.06h-9.315L104.618,15.29z')
+                        path.ar__3(d='M80.467,15.29L72.132,30h9.316l3.675-6.49l4.659-8.22l-4.659-8.23l-4-7.06h-9.315L80.467,15.29z')
+                        path.ar__4(d='M56.516,15.29L48.181,30H57.5l3.676-6.49l4.659-8.22l-4.659-8.23l-4-7.06h-9.314 L56.516,15.29z')
+                        path.ar__5(d='M32.461,15.29L24.127,30h9.315l3.676-6.49l4.658-8.22l-4.658-8.23l-4-7.06H23.8 L32.461,15.29z')
+                        path.ar__6(d='M8.661,15.29L0.327,30h9.315l3.676-6.49l4.658-8.22l-4.658-8.23l-4-7.06H0 L8.661,15.29z')
+                +title('Контакты')
+                +e.DIV.map-container
+                    +e.DIV.map#map
+                    +e.DIV.wrp
+                        +e.DIV.info-block
+                            +e.IMG.img(src="img/map-info.png")
+                            +e.UL.list
+                                +e.LI.item
+                                    +e.IMG.logo-img(src="img/logo.png")
+                                +e.LI.item
+                                    +e.SPAN.address
+                                        | г. Москва,
+                                        br
+                                        | Сандуновский пер.
+                                        br
+                                        | дом 3, стр. 2
+                                +e.LI.item
+                                    +e.A.phone(href="tel:+78122322434") +7 (812) 232-24-34
+
+        +b.FOOTER.footer
+            +b.DIV.header
+                +e.DIV.wrp
+                    +e.A.logo-block(href="/")
+                        +e.IMG.logo(src="img/logo.png")
+                    +e.DIV.menu-block
+                        +e.A.item(href="#cars" data-target="anchor") Автомобили
+                        +e.A.item(href="#reqs" data-target="anchor") Требования
+                        +e.A.item(href="#contacts" data-target="anchor") Контакты
+                        +e.A.item.header__item_phone(href="tel:+78122322434") +7 (812) 232-24-34
+            +e.DIV.bottom
+                +e.SPAN.bottom-item © 2017 Все права защищены.
+                +e.SPAN.bottom-item г. Москва, Сандуновский пер., 3, стр. 2
+                +e.A.bottom-item.footer__bottom-item_indins(href="https://indins.ru") Разработка сайта INDINS.RU
+
+        .hidden#modal
+            +b.DIV.hero-callback
+                +e.DIV.container
+                    +e.SPAN.title
+                        | Закажите обратный звонок,
+                        br
+                        | чтобы узнать подробнее
+                    +e.FORM.form.callback-form
+                        +e.DIV.input-block.hero-callback__input-block_name
+                            +e.INPUT.input(type='text' placeholder='Ваше имя')
+                        +e.DIV.input-block.hero-callback__input-block_phone
+                            +e.INPUT.input.callback-input(type='text' name="phone" placeholder='Ваш номер телефона')
+                        +e.DIV.submit-block
+                            +e.INPUT.submit(type='submit' value='Заказать звонок')
+        .hidden#success
+            .success
+                | Спасибо!
+                br
+                | Мы свяжемся с вами
+                br
+                | в ближайшее время.
+
+        // build:js js/vendor.js
+        script( src="libs/jquery/dist/jquery.min.js")
+        script( src="libs/slick-carousel/slick/slick.min.js")
+        script( src="libs/magnific-popup/dist/jquery.magnific-popup.min.js")
+        script( src="libs/wow/dist/wow.min.js")
+        script( src="libs/jquery.inputmask.bundle.js")
+        script( src="libs/sliderSuper.js")
+        script( src="libs/SmoothScroll.js")
+        // endbuild
+
+        // build:js js/main.js
+        script( src="js/main.js")
+        // endbuild
+
+        script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
+        script.
+            // wow.js
+            wow = new WOW(
+                {
+                    boxClass: 'wow',      // default
+                    animateClass: 'active', // default
+                    offset: 0,          // default
+                    mobile: true,       // default
+                    live: true        // default
+                }
+            )
+            wow.init();
+
+            // map
+            ymaps.ready(init);
+            var myMap;
+
+            function init() {
+                myMap = new ymaps.Map("map", {
+                    center: [59.931632, 30.336528],
+                    zoom: 17
+                });
+
+                var myPlacemark = new ymaps.Placemark([59.931551, 30.33400], {}, {
+                    iconLayout: 'default#image',
+                    iconImageHref: '/img/svg/map-mark.svg',
+                    iconImageSize: [50, 50],
+                    iconImageOffset: [-3, -42],
+                    hintContent: '',
+                    balloonContent: ''
+                });
+
+                myMap.geoObjects.add(myPlacemark);
+
+                myMap.controls
+                    .remove('Button')
+                    .remove('fullscreenControl')
+                    .remove('typeSelector')
+                    .remove('geolocationControl')
+                    .remove('searchControl')
+                    .remove('trafficControl')
+                    .remove('rulerControl')
+                    .remove('zoomControl');
+
+                myMap.behaviors.disable([
+                    'scrollZoom'
+                ])
+            }

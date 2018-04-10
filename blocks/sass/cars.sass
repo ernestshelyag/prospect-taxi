@@ -1,0 +1,123 @@
+.cars
+
+  position: relative
+  margin-top: 50px
+  overflow: hidden
+  background: #333
+
+  +r(1330)
+    background: url("../img/block-2.jpg")
+    background-size: cover
+    background-position: 50% 50%
+  +rm
+    margin-top: 0
+
+  &__paralax-img
+    position: absolute
+    width: 1920px
+    top: 0
+    right: 0
+    +r(1330)
+      display: none
+  &__wrp
+    +wrp
+  &__info-block
+    position: relative
+    max-width: 723px
+    padding: 47px 60px
+    border: solid 4px $main-color
+    +r(1166)
+      margin: auto
+    +r(660)
+      padding: 20px
+      font-size: 12px
+  &__car-name
+    display: none
+    color: $main-color
+    font-size: 25px
+    padding-bottom: 12px
+    +r(1166)
+      display: block
+  &__item
+    display: flex
+    justify-content: space-between
+    align-items: flex-end
+    padding: 5px 0
+  &__text
+    line-height: 2
+  &__dots
+    flex-grow: 1
+    border-bottom: dotted 2px rgba(#fff, .3)
+    margin: 0 5px
+    +r(500)
+      display: none
+  &__info
+    text-align: right
+  &__title-img
+    position: absolute
+    top: -20px
+    right: -377px
+    +r(1166)
+      display: none
+  &__car-img
+    position: absolute
+    top: 383px
+    right: -546px
+    z-index: 200
+    transition: all 2s
+    &_no-light
+      &.active
+        right: -446px
+    &_light
+      right: -323px
+      top: 383px
+      opacity: 0
+      &.active
+        animation: min-light 5s infinite
+        animation-delay: 2s
+
+    +r(1166)
+      display: none
+  &__bg-img
+    position: absolute
+    z-index: 100
+    top: -337px
+    right: -810px
+    +r(1166)
+      display: none
+.cars-btn-block
+  text-align: center
+  padding: 94px 0 70px
+  +r(1330)
+    padding: 57px 0 46px
+  +r(660)
+    padding: 40px 0
+  &__container
+    display: inline-block
+    position: relative
+  &__img
+    position: absolute
+    top: 10px
+    bottom: 0
+    margin: auto
+    &_ar-left
+      left: -165px
+    &_ar-right
+      right: -165px
+  &__btn
+    line-height: 52px
+    z-index: 2
+    +romb
+    &:before
+      background: $main-color
+    &:hover::before
+      border: solid 1px rgba(#fff, .5)
+      box-shadow: (0 0 20px $main-color)
+
+@keyframes min-light
+  from
+    opacity: 0
+  50%
+    opacity: 1
+  to
+    opacity: 0

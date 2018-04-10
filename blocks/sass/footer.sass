@@ -1,0 +1,49 @@
+.footer
+  height: 265px
+  background-image: url("../img/footer-bg.jpg")
+  background-size: cover
+  +r(1130)
+    height: 187px
+  &__bottom
+    +wrp
+    display: flex
+    justify-content: space-between
+    +r(1130)
+      flex-direction: column
+      align-items: center
+  &__bottom-item
+    +r(1130)
+      margin-top: 20px
+    +r(420)
+      font-size: 14px
+    &_indins
+      padding-right: 55px
+      +psevdo
+      &:after
+        width: 30px
+        height: 30px
+        top: 0
+        bottom: 0
+        right: 15px
+        margin: auto
+        background: url("../img/svg/logo-indins.svg")
+        background-size: contain
+        background-repeat: no-repeat
+      &:before
+        width: 0
+        height: 1px
+        background: $main-color
+        left: 0
+        bottom: -5px
+        +tr
+      &:hover::before
+        width: 84%
+
+  .header
+    position: relative
+    +r(1130)
+      display: none
+    &__menu-block
+      justify-content: flex-end
+    &__item
+      margin-left: 20px
